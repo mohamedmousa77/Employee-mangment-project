@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EmployeeService {
 
-  private apiUrl = `${enviroment.apiUtl}/employee`
+  private apiUrl = `${enviroment.apiUtl}/employee`;
 
   constructor(private http: HttpClient) { }
 
@@ -17,6 +17,6 @@ export class EmployeeService {
   }
 
   createEmployee(employee: Employee): Observable<Employee>(){
-
+    return this.http.post<Employee>(this.apiUrl, employee);
   }
 }
