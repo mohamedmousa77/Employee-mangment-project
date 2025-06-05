@@ -8,15 +8,19 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EmployeeService {
 
-  private apiUrl = `${enviroment.apiUtl}/employee`;
+  // private apiUrl = `${enviroment.apiUtl}/employee`;
+
+  private apiUrl = '';
 
   constructor(private http: HttpClient) { }
 
-  getEmployees(): Observable<Employee[]>{
+  getEmployees(): Observable<Employee[]> {
+
     return this.http.get<Employee[]>(this.apiUrl);
   }
 
-  createEmployee(employee: Employee): Observable<Employee>(){
-    return this.http.post<Employee>(this.apiUrl, employee);
-  }
+  // createEmployee(employee: Employee): Observable<Employee> {
+    // return this.http.post<Employee>(this.apiUrl);
+    // return this.http.post<Employee>(this.apiUrl, employee);
+  // }
 }

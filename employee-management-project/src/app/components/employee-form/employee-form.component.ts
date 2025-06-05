@@ -27,8 +27,8 @@ export class EmployeeFormComponent {
 
   OnSubmit(): void {
     console.log(`On submit: ${this.employee}`);
-    this.employeeService.createEmployee(this.employee)
-    .subscribe((result) => console.log(result));
+    // this.employeeService.createEmployee(this.employee)
+    // .subscribe((result) => console.log(result));
   }
 
 }
